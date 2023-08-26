@@ -28,7 +28,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Locale;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import org.apache.tiles.request.ApplicationResource;
 import org.apache.tiles.request.locale.URLApplicationResource;
@@ -57,7 +57,8 @@ public class WildcardServletApplicationContext extends ServletApplicationContext
      */
     public WildcardServletApplicationContext(ServletContext servletContext) {
         super(servletContext);
-        resolver = new ServletContextResourcePatternResolver(servletContext);
+        throw new UnsupportedOperationException("broken for spring 6.0!");
+       // resolver = new ServletContextResourcePatternResolver(servletContext);
     }
 
     /** {@inheritDoc} */

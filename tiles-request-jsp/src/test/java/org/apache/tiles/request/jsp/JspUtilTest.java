@@ -23,8 +23,8 @@ package org.apache.tiles.request.jsp;
 import static org.easymock.classextension.EasyMock.*;
 import static org.junit.Assert.*;
 
-import javax.servlet.jsp.JspContext;
-import javax.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.JspContext;
+import jakarta.servlet.jsp.PageContext;
 
 import org.apache.tiles.request.ApplicationAccess;
 import org.apache.tiles.request.ApplicationContext;
@@ -37,9 +37,7 @@ import org.junit.Test;
  */
 public class JspUtilTest {
 
-    /**
-     * Test method for {@link org.apache.tiles.request.jsp.JspUtil#getApplicationContext(javax.servlet.jsp.JspContext)}.
-     */
+
     @Test
     public void testGetApplicationContext() {
         ApplicationContext applicationContext = createMock(ApplicationContext.class);

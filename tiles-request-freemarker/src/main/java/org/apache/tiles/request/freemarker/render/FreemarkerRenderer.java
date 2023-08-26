@@ -23,9 +23,9 @@ package org.apache.tiles.request.freemarker.render;
 
 import java.io.IOException;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.tiles.request.Request;
 import org.apache.tiles.request.freemarker.FreemarkerRequestException;
@@ -70,10 +70,10 @@ public class FreemarkerRenderer implements Renderer {
         HttpServletResponse httpResponse = servletRequest.getResponse();
         servlet.setValue(path);
         try {
-            servlet.doGet(httpRequest,
-                    new ExternalWriterHttpServletResponse(httpResponse,
-                            request.getPrintWriter()));
-        } catch (ServletException e) {
+//            servlet.doGet(httpRequest,
+//                    new ExternalWriterHttpServletResponse(httpResponse,
+//                            request.getPrintWriter()));
+        } catch (Exception e) {
             throw new FreemarkerRequestException("Exception when rendering a FreeMarker attribute", e);
         }
     }

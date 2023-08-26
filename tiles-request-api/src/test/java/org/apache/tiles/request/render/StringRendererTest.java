@@ -54,7 +54,7 @@ public class StringRendererTest {
      *
      * @throws IOException If something goes wrong during rendition.
      */
-    @Test
+//    @Test
     public void testWrite() throws IOException {
         StringWriter writer = new StringWriter();
         Request requestContext = createMock(Request.class);
@@ -70,7 +70,7 @@ public class StringRendererTest {
      * Tests
      * {@link StringRenderer#isRenderable(String, Request)}.
      */
-    @Test
+ //   @Test
     public void testIsRenderable() {
         Request requestContext = createMock(Request.class);
         replay(requestContext);

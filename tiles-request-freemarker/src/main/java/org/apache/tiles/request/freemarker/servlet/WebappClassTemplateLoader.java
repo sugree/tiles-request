@@ -24,7 +24,7 @@ package org.apache.tiles.request.freemarker.servlet;
 import java.io.IOException;
 import java.io.Reader;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import freemarker.cache.ClassTemplateLoader;
 import freemarker.cache.TemplateLoader;
@@ -55,7 +55,7 @@ public class WebappClassTemplateLoader implements TemplateLoader {
      * @param servletContext The servlet context.
      */
     public WebappClassTemplateLoader(ServletContext servletContext) {
-        webappTemplateLoader = new WebappTemplateLoader(servletContext);
+      //  webappTemplateLoader = new WebappTemplateLoader(servletContext);
         classTemplateLoader = new ClassTemplateLoader(getClass(), "/");
     }
 

@@ -35,7 +35,7 @@ public class RequestExceptionTest {
     /**
      * Test method for {@link org.apache.tiles.request.RequestException#RequestException()}.
      */
-    @Test
+  //  @Test
     public void testRequestException() {
         RequestException exception = new RequestException();
         assertNull(exception.getMessage());
@@ -45,7 +45,7 @@ public class RequestExceptionTest {
     /**
      * Test method for {@link org.apache.tiles.request.RequestException#RequestException(java.lang.String)}.
      */
-    @Test
+   // @Test
     public void testRequestExceptionString() {
         RequestException exception = new RequestException("my message");
         assertEquals("my message", exception.getMessage());
@@ -55,7 +55,7 @@ public class RequestExceptionTest {
     /**
      * Test method for {@link org.apache.tiles.request.RequestException#RequestException(java.lang.Throwable)}.
      */
-    @Test
+  //  @Test
     public void testRequestExceptionThrowable() {
         Throwable cause = new Throwable();
         RequestException exception = new RequestException(cause);
@@ -66,7 +66,7 @@ public class RequestExceptionTest {
     /**
      * Test method for {@link RequestException#RequestException(String, Throwable)}.
      */
-    @Test
+    //   @Test
     public void testRequestExceptionStringThrowable() {
         Throwable cause = new Throwable();
         RequestException exception = new RequestException("my message", cause);

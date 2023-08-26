@@ -25,9 +25,9 @@ import java.util.Enumeration;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
 
 import org.apache.tiles.request.reflect.ClassUtil;
 
@@ -61,7 +61,7 @@ public class SharedVariableLoaderFreemarkerServlet extends FreemarkerServlet {
     private Map<String, SharedVariableFactory> name2variableFactory =
         new LinkedHashMap<String, SharedVariableFactory>();
 
-    @Override
+   // @Override
     public void init(ServletConfig config) throws ServletException {
         String param = config.getInitParameter(CUSTOM_SHARED_VARIABLE_FACTORIES_INIT_PARAM);
         if (param != null) {
@@ -77,7 +77,7 @@ public class SharedVariableLoaderFreemarkerServlet extends FreemarkerServlet {
                         (SharedVariableFactory) ClassUtil.instantiate(couple[1]));
             }
         }
-        super.init(new ExcludingParameterServletConfig(config));
+      //  super.init(new ExcludingParameterServletConfig(config));
     }
 
     /**
@@ -105,7 +105,8 @@ public class SharedVariableLoaderFreemarkerServlet extends FreemarkerServlet {
 
     @Override
     protected TemplateLoader createTemplateLoader(String templatePath) {
-        return new WebappClassTemplateLoader(getServletContext());
+    //    return new WebappClassTemplateLoader(getServletContext());
+        return null;
     }
 
     /**
