@@ -30,7 +30,7 @@
   <parent>
     <groupId>org.apache.tiles</groupId>
     <artifactId>tiles-request</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1.0</version>
   </parent>
 
   <build>
@@ -147,25 +147,26 @@
       <groupId>org.apache.tiles</groupId>
       <artifactId>tiles-request-api</artifactId>
     </dependency>
-
+<!--
     <dependency>
       <groupId>org.apache.tiles</groupId>
       <artifactId>tiles-request-freemarker</artifactId>
       <version>${project.version}</version>
     </dependency>
+-->
 
     <dependency>
       <groupId>org.apache.tiles</groupId>
       <artifactId>tiles-request-jsp</artifactId>
       <version>${project.version}</version>
     </dependency>
-
+<!--
     <dependency>
       <groupId>org.apache.tiles</groupId>
       <artifactId>tiles-request-mustache</artifactId>
       <version>${project.version}</version>
     </dependency>
-
+-->
     <dependency>
       <groupId>org.apache.tiles</groupId>
       <artifactId>tiles-request-portlet</artifactId>
@@ -187,13 +188,13 @@
       <artifactId>tiles-request-servlet-wildcard</artifactId>
       <version>${project.version}</version>
     </dependency>
-
+<!--
     <dependency>
       <groupId>org.apache.tiles</groupId>
       <artifactId>tiles-request-velocity</artifactId>
       <version>${project.version}</version>
     </dependency>
-
+-->
     <!-- Optional dependencies that will be redistributed -->
     <dependency>
       <groupId>org.slf4j</groupId>
